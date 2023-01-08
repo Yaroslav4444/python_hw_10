@@ -9,7 +9,8 @@ class NonNegative:
 
     def __set__(self, instance, value):
         if value < 0:
-            raise ValueError("Не может быть отрицательным!")
+            raise ValueError("Значение этого аттрибута не может быть "
+                             "отрицательным!")
         instance.__dict__[self.my_attr] = value
 
     def __set_name__(self, owner, my_attr):
